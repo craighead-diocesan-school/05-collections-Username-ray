@@ -9,7 +9,9 @@ let numberArray = [
   10000,
   100000,
   4444444,
-  1234567890
+  1234567890,
+  99999,
+  88888
 ]
 
 function searchNumbers() {
@@ -18,11 +20,14 @@ function searchNumbers() {
 
   for (let currentNumber of numberArray) {
     if (currentNumber == searchTarget) {
-      searchResult = true
-      alert(searchTarget + ' was found: ' + searchResult)
-    } else {
-      let searchResult = false
-      alert(searchTarget + ' was not found: ' + searchResult)
+        searchResult = true
     }
   }
+
+  if (searchResult == true) {
+    alert('Yayyy! ' + searchTarget + ' was found!')
+  } else {
+    alert('Unfortunately, ' + searchTarget + ' was not found...')
+  }
+  //
 }
